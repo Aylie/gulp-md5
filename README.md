@@ -1,19 +1,10 @@
-[![NPM](https://nodei.co/npm/gulp-md5.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/gulp-md5/)
-[![NPM](https://nodei.co/npm-dl/gulp-md5.png?months=9&height=3)](https://nodei.co/npm/gulp-md5/)
-
 # gulp-md5
 
 > md5 plugin for [gulp](https://github.com/wearefractal/gulp).
 
 ## Usage
 
-First, install `gulp-md5` as a development dependency:
-
-```shell
-npm install --save-dev gulp-md5
-```
-
-Then, add it to your `gulpfile.js`:
+To your `gulpfile.js`:
 
 ```javascript
 var md5 = require("gulp-md5");
@@ -26,22 +17,6 @@ gulp.src("./src/*.ext")
 ```
 
 ## API
-
-### md5({printOnly: True})
-
-#### printOnly
-Type: `Boolean`  
-Default: false
-
-Optional: you can pass printOnly to skip md5 appending to filenames and just print md5 of file to console.
-
-### md5({separator: '_'})
-
-#### separator
-Type: `String`  
-Default: '_'
-
-Optional: you can pass other separator like '-'.
 
 ### md5(size)
 
@@ -60,22 +35,14 @@ Example:
         .pipe(gulp.dest('./whatever'));
 ```
 
-The sample above will append the full md5 hash to each of the file matching src and store all of that into the *whatever* folder.
-
 ```shell
-whatever/
-├── index_a7ded4c00cdc9cdc47e55f6b85e3f909.html
-├── app_6b85e3f9096b85e3f9096b85e3f90943.js
-├── ...
+<filename> a7ded4c00cdc9cdc47e55f6b85e3f909
 ```
 
 If you pass the size argument, the hash will be truncated to that value. For instance md5(10) will produce:
 
 ```shell
-whatever/
-├── index_a7ded4c00c.html
-├── app_6b85e3f909.js
-├── ...
+<filename> a7ded4c00c
 ```
 
 ## License
